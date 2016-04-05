@@ -1,5 +1,7 @@
 <?php
 
+use App\Task;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,5 +14,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('tasks');
+});
+
+/*
+ * Add new task
+ */
+
+Route::post('/task', function(Request $request){
+   // 
+});
+
+/*
+ * Delete Task
+ */
+ 
+Route::delete('/task/{task}', function (Task $task){
+    //
 });
